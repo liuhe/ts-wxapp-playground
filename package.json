@@ -68,7 +68,9 @@
   "dependencies": {
     "babel-runtime": "^6.23.0",
     "es6-promise": "^4.1.0",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "ts-loader": "^3.5.0",
+    "typescript": "^2.8.1"
   },
   "jest": {
     "modulePathIgnorePatterns": [
