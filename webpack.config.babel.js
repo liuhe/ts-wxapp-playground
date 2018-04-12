@@ -124,6 +124,7 @@ export default (env = {}) => {
 		devtool: isDev ? 'source-map' : false,
 		resolve: {
 			modules: [resolve(__dirname, 'src'), 'node_modules']
+			, extensions: ['.js', '.ts']
 		},
 		watchOptions: {
 			ignored: /dist|manifest/,
