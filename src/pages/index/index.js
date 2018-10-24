@@ -1,4 +1,3 @@
-
 import { flow } from 'lodash';
 
 const delay = (t = 0) => new Promise((resolve) => setTimeout(resolve, t));
@@ -18,7 +17,6 @@ Page({
 		});
 	},
 	async onLoad() {
-
 		await delay();
 
 		const log = flow(() => {
