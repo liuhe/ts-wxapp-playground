@@ -6,4 +6,5 @@ declare namespace wx {
     export function getUserInfo(opts:any):void;
     export function showLoading(opts:any):void;
     export function hideLoading(opts:any):void;
+    export function getSystemInfoSync():void;
 }
