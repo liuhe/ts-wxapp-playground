@@ -60,6 +60,12 @@ export default (env = {}) => {
 					use: ['babel-loader', shouldLint && 'eslint-loader'].filter(Boolean),
 				},
 				{
+					test: /\.ts$/,
+					include: /src/,
+					exclude: /node_modules/,
+					use: ['ts-loader', shouldLint && 'eslint-loader'].filter(Boolean)
+				},
+				{
 					test: /\.wxs$/,
 					include: /src/,
 					exclude: /node_modules/,
@@ -116,6 +122,7 @@ export default (env = {}) => {
 			}),
 			new WXAppWebpackPlugin({
 				clear: !isDev,
+				extensions: ['.js', '.ts'],
 			}),
 			new optimize.ModuleConcatenationPlugin(),
 			new IgnorePlugin(/vertx/),
@@ -126,6 +133,7 @@ export default (env = {}) => {
 		devtool: isDev ? 'source-map' : false,
 		resolve: {
 			modules: [resolve(__dirname, 'src'), 'node_modules'],
+			extensions: ['.js', '.ts'],
 		},
 		watchOptions: {
 			ignored: /dist|manifest/,
