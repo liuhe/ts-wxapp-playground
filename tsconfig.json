@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "sourceMap": true
-    , "typeRoots" : ["./typings"]
+    "target": "es5",
+    "lib": ["ES2015", "DOM"],
+    "rootDirs": [ "src" ],
+    "typeRoots" : ["./typings"]
   }
 }
